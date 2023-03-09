@@ -10,7 +10,6 @@ import { fetchMovieDetsById } from '../services/apiService';
 import { BASE_IMG_URL } from 'services/constants';
 import { Loader } from 'components/Loader/Loader';
 import { toast } from 'react-toastify';
-import { Details, About, Button, Link } from './MovieDetails.styled';
 
 const MovieDetails = () => {
   const [movieData, setMovieData] = useState(null);
@@ -67,7 +66,7 @@ const MovieDetails = () => {
         src={
           movieData.poster_path
             ? BASE_IMG_URL + movieData.poster_path
-            : required('img/smile.jpg')
+            : require('img/smile.jpg')
         }
         alt=""
         width="200"
