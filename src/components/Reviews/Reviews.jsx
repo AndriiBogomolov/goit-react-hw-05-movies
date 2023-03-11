@@ -24,8 +24,7 @@ const Reviews = () => {
     })();
   }, [id]);
   return (
-    <div>
-      <h1>Reviews</h1>
+    <div className="reviews-content">
       {reviews.map(({ id, author, content }) => (
         <li key={id}>
           <p>Autor: {author}</p>

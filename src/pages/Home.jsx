@@ -33,7 +33,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Home</h1>
+      <h1>Tranding today</h1>
       {movies.length !== 0 && <MoviesList movies={movies} />}
       {isLoading && <Loader />}
       {error && toast.error('Please wait...')}

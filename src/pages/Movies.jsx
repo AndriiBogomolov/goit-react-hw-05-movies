@@ -40,7 +40,6 @@ const Movies = () => {
   };
   return (
     <div>
-      <h1>Movies</h1>
       <form onSubmit={handleSubmit} className="form">
         <input
           type="text"
@@ -49,12 +48,12 @@ const Movies = () => {
           placeholder="Search"
         />
         <button type="button" className="imput_button">
-          search
+          Search
         </button>
       </form>
       {movies.length !== 0 && <MoviesList movies={movies} />}
       {isLoading && <Loader />}
-      {error && <p>Подождите, что-то пошло не так</p>}
+      {error && <p>Please wait, something is going wrong...</p>}
     </div>
   );
 };
