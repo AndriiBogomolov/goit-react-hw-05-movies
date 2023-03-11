@@ -4,9 +4,9 @@ import propTypes from 'prop-types';
 export const MoviesList = ({ movies }) => {
   const location = useLocation();
   return (
-    <ul>
+    <ul className="render_List">
       {movies.map(movie => (
-        <li key={movie.id}>
+        <li key={movie.id} className="renderCard">
           <NavLink
             to={`/movies/${movie.id}`}
             state={{

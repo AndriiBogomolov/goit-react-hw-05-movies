@@ -13,3 +13,119 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  padding-bottom: 24px;
+}
+
+.active_link {
+  padding: 10px;
+  color: rgb(0, 130, 65);
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.link {
+  padding: 10px;
+  color: rgb(199, 63, 63);
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.imput_button {
+  display: inline-block;
+  height: 40px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 20px;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.render_List {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  list-style: none;
+  padding: 20px;
+}
+
+.renderCard {
+  width: 30%;
+  display: flex;
+  text-align: center;
+}
+
+.Cast_box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.Cast_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  gap: 10px;
+  height: 320px;
+  /* color: azure; */
+}
+
+.Cast_title {
+  width: 100%;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  margin: 0px;
+}
+
+.Navigation {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+}

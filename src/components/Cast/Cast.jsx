@@ -26,10 +26,10 @@ const Cast = () => {
   }, [id]);
 
   return (
-    <div>
-      <h1>Cast</h1>
+    <div className="Cast_box">
+      <h1 className="Cast_title">Cast</h1>
       {cast.map(({ cast_id, profile_path, name }) => (
-        <li key={cast_id}>
+        <li key={cast_id} className="Cast_card">
           <img
             src={
               profile_path

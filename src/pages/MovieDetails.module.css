@@ -1,4 +1,21 @@
-import styled from '@emotion/styled';
+.moviedetails {
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.buttonGoBack {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+/* import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const Details = styled.div`
@@ -16,4 +33,4 @@ export const About = styled.div`
 `;
 export const Link = styled(NavLink)`
   margin-botton: 20px;
-`;
+`; */

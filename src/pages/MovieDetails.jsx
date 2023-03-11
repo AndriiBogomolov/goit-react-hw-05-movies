@@ -10,6 +10,7 @@ import { fetchMovieDetsById } from '../services/apiService';
 import { BASE_IMG_URL } from 'services/constants';
 import { Loader } from 'components/Loader/Loader';
 import { toast } from 'react-toastify';
+import css from './MovieDetails.module.css';
 
 const MovieDetails = () => {
   const [movieData, setMovieData] = useState(null);
@@ -46,21 +47,9 @@ const MovieDetails = () => {
   }
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
-      <button
-        onClick={handleGoBack}
-        style={{
-          display: 'flex',
-          width: '50',
-          marginRight: 'auto',
-        }}
-      >
-        go back
+    <div className={css.moviedetails}>
+      <button className={css.buttonGoBack} onClick={handleGoBack}>
+        Go back
       </button>
       <img
         src={
@@ -71,7 +60,7 @@ const MovieDetails = () => {
         alt=""
         width="200"
       />
-      <h1>Additional info</h1>
+      <h4>Additional information</h4>
       <NavLink
         to="cast"
         state={{
@@ -91,7 +80,7 @@ const MovieDetails = () => {
       </NavLink>
       <Outlet />
       {isLoading && <Loader />}
-      {error && toast.error('Подождите...')}
+      {error && toast.error('Please wait..')}
     </div>
   );
 };
