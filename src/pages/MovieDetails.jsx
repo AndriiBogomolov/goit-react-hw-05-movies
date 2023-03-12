@@ -13,7 +13,7 @@ import { toast } from 'react-toastify';
 import css from './MovieDetails.module.css';
 
 const MovieDetails = () => {
-  const [movieData, setMovieData] = useState(null);
+  const [movieData, setMovieData] = useState();
   const { id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
