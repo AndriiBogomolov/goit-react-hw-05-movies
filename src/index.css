@@ -142,3 +142,15 @@ margin-top: 20px;
   list-style: none;
 
 }
+
+.moviedetails {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+.buttonGoBack {
+  display: flex;
+  margin-bottom: 5px;
+}

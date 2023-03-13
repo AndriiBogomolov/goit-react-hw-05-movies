@@ -3,14 +3,15 @@ import { useSearchParams } from 'react-router-dom';
 import { fetchMovieByQuery } from '../services/apiService';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { Loader } from 'components/Loader/Loader';
+import Notiflix from 'notiflix';
 
 const Movies = () => {
   const [query, setQuery] = useState('');
   const [movies, setMovies] = useState([]);
-  const [searchParams, setSearchParams] = useSearchParams();
-  const searchQuery = searchParams.get('query');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const searchQuery = searchParams.get('query');
 
   useEffect(() => {
     if (!searchQuery) {
@@ -31,13 +32,19 @@ const Movies = () => {
   }, [searchQuery]);
 
   const handleChange = ({ target: { value } }) => {
-    setQuery(value);
+    setQuery(value.trim());
   };
 
   const handleSubmit = e => {
     e.preventDefault();
     setSearchParams({ query });
+    if (query.trim() === '') {
+      Notiflix.Notify.failure('Please, enter your query.');
+      return;
+    }
+    e.target.reset();
   };
+
   return (
     <div>
       <form onSubmit={handleSubmit} className="form">

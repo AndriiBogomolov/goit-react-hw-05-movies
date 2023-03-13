@@ -10,15 +10,14 @@ import { fetchMovieDetsById } from '../services/apiService';
 import { BASE_IMG_URL } from 'services/constants';
 import { Loader } from 'components/Loader/Loader';
 import { toast } from 'react-toastify';
-import css from './MovieDetails.module.css';
 
 const MovieDetails = () => {
-  const [movieData, setMovieData] = useState();
+  const [movieData, setMovieData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
   const { id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
 
   useEffect(() => {
     (async () => {
@@ -37,17 +36,10 @@ const MovieDetails = () => {
   const handleGoBack = () => {
     navigate(location.state.from);
   };
-  if (!movieData) {
-    return (
-      <div>
-        <h1>Loading data...</h1>
-      </div>
-    );
-  }
 
   return (
-    <div className={css.moviedetails}>
-      <button className={css.buttonGoBack} onClick={handleGoBack}>
+    <div className="moviedetails">
+      <button className="buttonGoBack" onClick={handleGoBack}>
         Go back
       </button>
       <div className="details">
