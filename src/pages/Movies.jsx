@@ -54,7 +54,7 @@ const Movies = () => {
           onChange={handleChange}
           placeholder="Search"
         />
-        <button type="button" className="imput_button">
+        <button type="submit" className="input_button">
           Search
         </button>
       </form>
